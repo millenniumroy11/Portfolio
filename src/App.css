@@ -1,38 +1,183 @@
-.App {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #cccccc;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Metallic black theme for navbar */
+.metallic-navbar {
+  background-color: #0d0d0d;
+  border-bottom: 1px solid #2a2a2a;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Silver text */
+.text-silver {
+  color: #cccccc !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ffffff !important;
+  border-bottom: 2px solid #666666;
+}
+
+.navbar-brand:hover {
+  color: #ffffff !important;
+}
+
+.navbar-toggler {
+  border-color: #666666;
+}
+
+/* About Table Layout */
+.about-table {
+  width: 100%;
+  margin-top: 80px;
+  padding: 0 40px;
+}
+/*.about-table td{
+  border: 2px solid #0edf19;
+}*/
+
+.text-section {
+  color: #0edf19;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.9s;
+  line-height: 1.6;
+  text-align: left;
+  vertical-align: middle;
+  
+}
+
+.text-section h1::after {
+  content: "|";
+  animation: blink 0.8s infinite;
+  margin-left: 5px;
+}
+
+.image-cell {
+  text-align: right;
+  vertical-align: top;
+  
+}
+
+.about-img {
+  width: 500px;
+  height: auto;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  border: 3px solid #0edf19;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-table {
+    display: block;
+  }
+
+  .about-table tr,
+  .about-table td {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-img {
+    width: 80%;
+    border-bottom-left-radius: 180px;
+    margin-top: 20px;
+  }
+
+  .text-section {
+    text-align: center;
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section {
+  padding-top: 100px;
+  color: #0edf19;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.section h1 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 36px;
+}
+
+.section2 {
+  padding-top: 100px;
+  color: #0edf19;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.about-text p {
+  font-size: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text p {
+  font-size: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.subhead{
+  color: #94da97;
 }
 
-.App-link {
-  color: #61dafb;
+.contactinfo{
+  color: #00ff0d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-icons {
+  margin-top: 15px;
+}
+
+.icon-link {
+  font-size: 28px;
+  color: #0edf19;
+  margin-right: 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.icon-link:hover {
+  color: #ffffff;
+}
+
+
+#about, #education, #experience, #projects, #skills, #certifications, #contact {
+  scroll-margin-top: 100px;
 }
