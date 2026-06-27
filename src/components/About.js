@@ -45,6 +45,8 @@ export default function About() {
             <td className="text-section">
               <h1>{typedText[0]}</h1>
               <h1>{typedText[1]}</h1>
+              <p className="tagline">AI / Backend Developer</p>
+              <a href="#contact" className="cta-btn">Get In Touch</a>
               <div className="social-icons">
     <a
       href="https://github.com/millenniumroy11"
@@ -64,9 +66,11 @@ export default function About() {
     </a>
   </div>
             </td>
-           
+
             <td className="image-cell">
-              <img src={meImg} alt="Myself" className="about-img" />
+              <div className="about-img-wrap">
+                <img src={meImg} alt="Myself" className="about-img" />
+              </div>
             </td>
           </tr>
           

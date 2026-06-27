@@ -20,11 +20,11 @@ import {
 
 function App() {
   return (
-    /*<Router>
+    /*<Router>  // This will also work but it will NOT navigate to the correct part as you click on any navbar option.
       <Navbar />
       <About />
       <Education />
-      <Experience />
+      <Experience /> 
       <Projects />
       <Skils />
       <Certifications />

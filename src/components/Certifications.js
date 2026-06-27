@@ -1,33 +1,32 @@
 import React from 'react';
 import './style.css';
 
+const certifications = [
+  { title: 'Coursera (Google)', points: ['Crash Course on Python'] },
+  { title: 'Coursera (Stanford)', points: ['Unsupervised Learning, Recommenders, Reinforcement Learning'] },
+  { title: 'NPTEL (IIT Kharagpur)', points: ['Software Testing'] },
+  { title: 'Guvi', points: ['Python Programming'] },
+  { title: 'Yuva', points: ['Website Designing Workshop'] },
+  { title: 'Ai4 India', points: ['Animation and Game Designing Workshop'] },
+];
+
 export default function Certifications(props) {
   return (
     <div className='certifications'>
       <div className='section2'>
-    <h1>Certifications & Workshops</h1>
+        <h1>Certifications & Workshops</h1>
       </div>
-      <div className='text'>
-        <p>
-        <div className='subhead'>Coursera (GOOGLE) <br /></div>
-        → Crash Course on Python <br /> <br />
-
-        <div className='subhead'>Coursera (STNDFORD) <br /></div>
-        → Unsupervised Learning, Recommenders, Reinforcement Learning <br /> <br />
-
-        <div className='subhead'>NPTEL (IIT Kharagpur) <br /></div>
-        → Software Testing <br /> <br />
-
-        <div className='subhead'>Guvi <br /></div>
-        → Python Programming <br /> <br />
-
-        <div className='subhead'>Yuva <br /></div>
-        → Website Designing Workshop <br /> <br />
-
-        <div className='subhead'>Ai4 India <br /></div>
-        → Animation and Game Designing Workshop
-
-        </p>
+      <div className="card-grid">
+        {certifications.map((cert, idx) => (
+          <div className="info-card" style={{ animationDelay: `${idx * 0.1}s` }} key={cert.title}>
+            <div className="card-title">{cert.title}</div>
+            <ul className="card-body-text">
+              {cert.points.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
   )
